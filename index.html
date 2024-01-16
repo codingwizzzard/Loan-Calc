@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="ASSETS/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="loan-header">
+            <p>
+                Loan Calculator
+            </p>
+        </div>
+        <div class="bg">
+            <label class="calculator-label">Select Loan Type</label>
+            <div id=""></div>
+            <div class="type" id="type">
+                <select id="loanType" class="calculator-input">
+                    <option value="">Choose loan type</option>
+                    <option value="Car">Car</option>
+                    <option value="Home">Home</option>
+                    <option value="Personal">Personal</option>
+                </select>
+            </div>
+            <div class="currency">
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="bg">
+            <label class="calculator-label">Loan Amount</label>
+            <div id="range-value2"></div>
+            <input class="calculator-input" type="range" min="500" max="5000" onchange="loanrange(this.value)">
+            <div class="currency">
+                <p>500/-</p>
+                <p>5000/-</p>
+            </div>
+        </div>
+        <div class="bg">
+            <label class="calculator-label">Duration</label>
+            <div id="range-value"></div>
+            <input class="calculator-input" type="range" min="6" max="18" onchange="range(this.value)">
+            <div class="month">
+                <p>6 Months</p>
+                <p>18 Months</p>
+            </div>
+        </div>
+        <div class="loan-calculated" id="loan-cal">
+            <p>
+                Loan Calculated
+            </p>
+            <div style="line-height:36.6pt; background-color: white;">
+                <div id="result"></div>
+            </div>
+        </div>
+        <div class="bg-btn">
+            <button class="calculator-button" onclick="Calc()">CALCULATE</button>
+            <button class="calculator-apply" onclick="clearval()">CLEAR</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="ASSETS/js/script.js"></script>
+</body>
+
+</html>
